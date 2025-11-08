@@ -364,7 +364,7 @@ if df is not None:
 
         st.write(f"- **Mais comprado online:** {prod_online_top}")
         st.write(f"- **Mais comprado físico:** {prod_fisico_top}")
-        st.write(f"- **Avaliação física > online:** {diferenca > 0}")
+        st.write(f"- **Avaliação física > online:**")
 
     st.markdown("---")
 
@@ -384,3 +384,4 @@ if df is not None:
 else:
 
     st.error("Não foi possível carregar os dados. Verifique o arquivo CSV.")
+
