@@ -30,7 +30,7 @@ df = load_data(FILE_NAME)
 
 if df is not None:
     # --- 3. Título e KPIs Principais ---
-    st.title("📊 Dashboard: Preferências de Compra E-commerce vs. Loja Física")
+    st.title("📊 Preferências de Compra E-commerce vs. Loja Física")
     st.markdown("---")
 
     # KPIs no topo
@@ -247,9 +247,9 @@ if df is not None:
 
         diferenca = media_exp - media_conf
         if diferenca > 0:
-            st.success(f"Loja física está **{diferenca:.2f} pontos** à frente!")
+            st.success(f"Loja física está **{diferenca:.2f} pontos** à frente")
         else:
-            st.success(f"Online está **{abs(diferenca):.2f} pontos** à frente!")
+            st.success(f"Online está **{abs(diferenca):.2f} pontos** à frente")
 
     st.markdown("---")
 
@@ -382,4 +382,5 @@ if df is not None:
         )
 
 else:
+
     st.error("Não foi possível carregar os dados. Verifique o arquivo CSV.")
