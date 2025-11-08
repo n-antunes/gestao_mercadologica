@@ -34,7 +34,7 @@ if df is not None:
     st.markdown("---")
 
     # KPIs no topo
-    col_kpi1, col_kpi2, col_kpi3, col_kpi4 = st.columns(4)
+    col_kpi1, col_kpi2, col_kpi3 = st.columns(4)
 
     total_respondentes = len(df)
     col_onde_compra = "Onde você realiza a maioria das suas compras atualmente?"
@@ -54,11 +54,6 @@ if df is not None:
         avg_confianca = df[col_confianca_online].mean()
         st.metric("⭐ Confiança Online Média", f"{avg_confianca:.2f}/5",
                   f"{(avg_confianca / 5) * 100:.0f}%")
-
-    with col_kpi4:
-        taxa_desistencia = (df[col_desistencia].str.contains('Sim', na=False).sum() / total_respondentes * 100)
-        st.metric("⚠️ Taxa de Desistência", f"{taxa_desistencia:.1f}%",
-                  delta=f"-{100 - taxa_desistencia:.1f}%", delta_color="inverse")
 
     st.markdown("---")
 
@@ -384,5 +379,6 @@ if df is not None:
 else:
 
     st.error("Não foi possível carregar os dados. Verifique o arquivo CSV.")
+
 
 
