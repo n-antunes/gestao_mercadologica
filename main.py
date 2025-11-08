@@ -34,7 +34,7 @@ if df is not None:
     st.markdown("---")
 
     # KPIs no topo
-    col_kpi1, col_kpi2, col_kpi3 = st.columns(4)
+    col_kpi1, col_kpi2, col_kpi3 = st.columns(3)
 
     total_respondentes = len(df)
     col_onde_compra = "Onde você realiza a maioria das suas compras atualmente?"
@@ -379,6 +379,7 @@ if df is not None:
 else:
 
     st.error("Não foi possível carregar os dados. Verifique o arquivo CSV.")
+
 
 
 
