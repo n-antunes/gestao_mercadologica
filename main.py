@@ -350,7 +350,7 @@ if df is not None:
 
         st.write(f"- **Principal motivo online:** {motivo_online_top}")
         st.write(f"- **Principal motivo físico:** {motivo_fisico_top}")
-        st.write(f"- **Taxa de desistência:** {taxa_desistencia:.1f}%")
+        # st.write(f"- **Taxa de desistência:** {taxa_desistencia:.1f}%")
 
     with col17:
         st.markdown("### 🏆 Produtos Campeões")
@@ -379,6 +379,7 @@ if df is not None:
 else:
 
     st.error("Não foi possível carregar os dados. Verifique o arquivo CSV.")
+
 
 
 
